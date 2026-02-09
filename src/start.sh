@@ -7,7 +7,6 @@ TCMALLOC="$(ldconfig -p | grep -Po "libtcmalloc.so.\d" | head -n 1)"
 export LD_PRELOAD="${TCMALLOC}"
 export PYTHONUNBUFFERED=true
 python /stable-diffusion-webui/webui.py \
-  --xformers \
   --no-half-vae \
   --skip-python-version-check \
   --skip-torch-cuda-test \
